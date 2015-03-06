@@ -4,7 +4,7 @@ release=1
 source=(init inittab rc rc.dhcp)
 
 build() {
-  mkdir -p $PKG/{etc,dev,root,sys,tmp}
+  mkdir -p $PKG/{etc,dev,root,proc,sys,tmp}
   chmod 1777 $PKG/tmp
 
   install -D -m 755 rc $PKG/etc/rc

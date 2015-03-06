@@ -4,6 +4,7 @@ drwxr-xr-x	root/root	etc/
 -rwxr-xr-x	root/root	etc/rc
 -rwxr-xr-x	root/root	etc/rc.dhcp
 -rwxr-xr-x	root/root	init
+drwxr-xr-x	root/root	proc/
 drwxr-xr-x	root/root	root/
 drwxr-xr-x	root/root	sys/
 drwxrwxrwt	root/root	tmp/
