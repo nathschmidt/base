@@ -46,6 +46,17 @@ For the moment you can test the resulting ``image.iso`` built by using `qemu`_::
     qemu-system-x86_64 -cdrom image.iso -net bridge,br=br0 -net nic
 
 
+pOS does a few things at boot:
+
+* Start DHCP on eth0
+* Start Dropbear
+
+You can login remotely via an SSH client::
+    
+    ssh root@a.b.c.d
+
+The ``root`` password by default is empty (*not set*).
+
 .. note:: Right now a couple of assumptions are made.
           CRUX is used as the host system for building.
           You have a fully working `qemu`_ setup and preconfigured ``br0`` bridge to your LAN.
