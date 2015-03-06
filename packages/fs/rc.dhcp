@@ -1,6 +1,31 @@
 #!/bin/sh
 
-ip addr add $ip/$mask dev $interface
-if [ -n "$router" ]; then
-    ip route add default via $router
+IP="/sbin/ip"
+RESOLV="/etc/resolv.conf"
+bcast="+"
+
+echo $hostname > /etc/hostname
+hostname $hostname
+
+if [ -n "$broadcast" ]; then
+  bcast=$broadcast
 fi
+
+$IP addr add $ip/$mask dev $interface broadcast $bcast
+
+if [ -n "$router" ]; then
+  for i in $router; do
+    $IP route add default via $i
+  done
+fi
+
+if [ -n "$dns" ]; then
+  > $RESOLV
+  if [ -n "$domain" ]; then
+    echo domain $domain >> $RESOLV
+    echo search $domain >> $RESOLV
+  fi
+  for i in $dns; do
+    echo nameserver $i >> $RESOLV
+  done
+fi 
