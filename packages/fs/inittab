@@ -1,0 +1,7 @@
+::sysinit:/etc/rc
+::restart:/sbin/init
+::ctrlaltdel:/sbin/reboot
+::respawn:/bin/cttyhack /bin/sh
+tty2::respawn:/bin/sh
+tty3::respawn:/bin/sh
+tty4::respawn:/bin/sh

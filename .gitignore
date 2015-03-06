@@ -1,0 +1,7 @@
+*~
+rootfs
+image.iso
+rootfs.cpio.gz
+kernel/linux-*
+kernel/*.tar.xz
+packages/*/*.tar*

@@ -1,0 +1,14 @@
+name=fs
+version=0.0.1
+release=1
+source=(init inittab rc rc.dhcp)
+
+build() {
+  mkdir -p $PKG/{etc,dev,root,sys,tmp}
+  chmod 1777 $PKG/tmp
+
+  install -D -m 755 rc $PKG/etc/rc
+  install -D -m 755 rc.dhcp $PKG/etc/rc.dhcp
+  install -D -m 644 inittab $PKG/etc/inittab
+  install -D -m 755 init $PKG/init
+}

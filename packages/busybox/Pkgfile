@@ -1,0 +1,29 @@
+name=busybox
+version=1.23.1
+release=1
+source=(
+  http://busybox.net/downloads/$name-$version.tar.bz2
+  $name-$version-{dc,modinfo,modprobe-small,wget}.patch
+)
+
+build() {
+  cd $name-$version
+
+  # https://bugs.gentoo.org/show_bug.cgi?id=310413
+  export CFLAGS+=' -fno-strict-aliasing'
+
+  for i in $SRC/*.patch; do
+    patch -p1 -i $i
+  done
+
+  make defconfig
+
+  sed -i "s/.*CONFIG_STATIC.*/CONFIG_STATIC=y/" .config
+
+  make busybox
+
+  make install
+
+  cp -r _install/* $PKG
+  rm -rf $PKG/linuxrc
+}
