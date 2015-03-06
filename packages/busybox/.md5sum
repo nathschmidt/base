@@ -3,3 +3,4 @@
 4152f8eb84b727beba2af02b856f8e94  busybox-1.23.1-modprobe-small.patch
 fb515c1c849330eeb6596519f65d4540  busybox-1.23.1-wget.patch
 5c94d6301a964cd91619bd4d74605245  busybox-1.23.1.tar.bz2
+a8a36473bde27928c379f5e371828e15  config-1.23.1

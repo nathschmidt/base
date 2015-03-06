@@ -59,7 +59,6 @@ lrwxrwxrwx	root/root	bin/nice -> busybox
 lrwxrwxrwx	root/root	bin/pidof -> busybox
 lrwxrwxrwx	root/root	bin/ping -> busybox
 lrwxrwxrwx	root/root	bin/ping6 -> busybox
-lrwxrwxrwx	root/root	bin/pipe_progress -> busybox
 lrwxrwxrwx	root/root	bin/printenv -> busybox
 lrwxrwxrwx	root/root	bin/ps -> busybox
 lrwxrwxrwx	root/root	bin/pwd -> busybox
@@ -67,8 +66,6 @@ lrwxrwxrwx	root/root	bin/reformime -> busybox
 lrwxrwxrwx	root/root	bin/rev -> busybox
 lrwxrwxrwx	root/root	bin/rm -> busybox
 lrwxrwxrwx	root/root	bin/rmdir -> busybox
-lrwxrwxrwx	root/root	bin/rpm -> busybox
-lrwxrwxrwx	root/root	bin/run-parts -> busybox
 lrwxrwxrwx	root/root	bin/scriptreplay -> busybox
 lrwxrwxrwx	root/root	bin/sed -> busybox
 lrwxrwxrwx	root/root	bin/setarch -> busybox
@@ -94,7 +91,6 @@ lrwxrwxrwx	root/root	sbin/adjtimex -> ../bin/busybox
 lrwxrwxrwx	root/root	sbin/arp -> ../bin/busybox
 lrwxrwxrwx	root/root	sbin/blkid -> ../bin/busybox
 lrwxrwxrwx	root/root	sbin/blockdev -> ../bin/busybox
-lrwxrwxrwx	root/root	sbin/bootchartd -> ../bin/busybox
 lrwxrwxrwx	root/root	sbin/depmod -> ../bin/busybox
 lrwxrwxrwx	root/root	sbin/devmem -> ../bin/busybox
 lrwxrwxrwx	root/root	sbin/fbsplash -> ../bin/busybox
@@ -108,7 +104,6 @@ lrwxrwxrwx	root/root	sbin/getty -> ../bin/busybox
 lrwxrwxrwx	root/root	sbin/halt -> ../bin/busybox
 lrwxrwxrwx	root/root	sbin/hdparm -> ../bin/busybox
 lrwxrwxrwx	root/root	sbin/hwclock -> ../bin/busybox
-lrwxrwxrwx	root/root	sbin/ifconfig -> ../bin/busybox
 lrwxrwxrwx	root/root	sbin/ifdown -> ../bin/busybox
 lrwxrwxrwx	root/root	sbin/ifenslave -> ../bin/busybox
 lrwxrwxrwx	root/root	sbin/ifup -> ../bin/busybox
@@ -141,11 +136,9 @@ lrwxrwxrwx	root/root	sbin/poweroff -> ../bin/busybox
 lrwxrwxrwx	root/root	sbin/raidautorun -> ../bin/busybox
 lrwxrwxrwx	root/root	sbin/reboot -> ../bin/busybox
 lrwxrwxrwx	root/root	sbin/rmmod -> ../bin/busybox
-lrwxrwxrwx	root/root	sbin/route -> ../bin/busybox
 lrwxrwxrwx	root/root	sbin/runlevel -> ../bin/busybox
 lrwxrwxrwx	root/root	sbin/setconsole -> ../bin/busybox
 lrwxrwxrwx	root/root	sbin/slattach -> ../bin/busybox
-lrwxrwxrwx	root/root	sbin/start-stop-daemon -> ../bin/busybox
 lrwxrwxrwx	root/root	sbin/sulogin -> ../bin/busybox
 lrwxrwxrwx	root/root	sbin/swapoff -> ../bin/busybox
 lrwxrwxrwx	root/root	sbin/swapon -> ../bin/busybox
@@ -168,7 +161,6 @@ lrwxrwxrwx	root/root	usr/bin/bunzip2 -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/bzcat -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/bzip2 -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/cal -> ../../bin/busybox
-lrwxrwxrwx	root/root	usr/bin/chpst -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/chrt -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/chvt -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/cksum -> ../../bin/busybox
@@ -184,11 +176,8 @@ lrwxrwxrwx	root/root	usr/bin/diff -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/dirname -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/dos2unix -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/du -> ../../bin/busybox
-lrwxrwxrwx	root/root	usr/bin/dumpleases -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/eject -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/env -> ../../bin/busybox
-lrwxrwxrwx	root/root	usr/bin/envdir -> ../../bin/busybox
-lrwxrwxrwx	root/root	usr/bin/envuidgid -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/expand -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/expr -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/fgconsole -> ../../bin/busybox
@@ -213,8 +202,6 @@ lrwxrwxrwx	root/root	usr/bin/last -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/less -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/logger -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/logname -> ../../bin/busybox
-lrwxrwxrwx	root/root	usr/bin/lpq -> ../../bin/busybox
-lrwxrwxrwx	root/root	usr/bin/lpr -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/lsof -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/lspci -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/lsusb -> ../../bin/busybox
@@ -247,15 +234,11 @@ lrwxrwxrwx	root/root	usr/bin/realpath -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/renice -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/reset -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/resize -> ../../bin/busybox
-lrwxrwxrwx	root/root	usr/bin/rpm2cpio -> ../../bin/busybox
-lrwxrwxrwx	root/root	usr/bin/runsv -> ../../bin/busybox
-lrwxrwxrwx	root/root	usr/bin/runsvdir -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/rx -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/script -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/seq -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/setkeycodes -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/setsid -> ../../bin/busybox
-lrwxrwxrwx	root/root	usr/bin/setuidgid -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/sha1sum -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/sha256sum -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/sha3sum -> ../../bin/busybox
@@ -263,19 +246,16 @@ lrwxrwxrwx	root/root	usr/bin/sha512sum -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/showkey -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/shuf -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/smemcap -> ../../bin/busybox
-lrwxrwxrwx	root/root	usr/bin/softlimit -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/sort -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/split -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/strings -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/sum -> ../../bin/busybox
-lrwxrwxrwx	root/root	usr/bin/sv -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/tac -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/tail -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/tcpsvd -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/tee -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/telnet -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/test -> ../../bin/busybox
-lrwxrwxrwx	root/root	usr/bin/tftp -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/time -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/timeout -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/top -> ../../bin/busybox
@@ -311,7 +291,6 @@ lrwxrwxrwx	root/root	usr/bin/xz -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/xzcat -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/bin/yes -> ../../bin/busybox
 drwxr-xr-x	root/root	usr/sbin/
-lrwxrwxrwx	root/root	usr/sbin/add-shell -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/addgroup -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/adduser -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/arping -> ../../bin/busybox
@@ -322,7 +301,6 @@ lrwxrwxrwx	root/root	usr/sbin/chroot -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/crond -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/delgroup -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/deluser -> ../../bin/busybox
-lrwxrwxrwx	root/root	usr/sbin/dhcprelay -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/dnsd -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/ether-wake -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/fakeidentd -> ../../bin/busybox
@@ -331,10 +309,8 @@ lrwxrwxrwx	root/root	usr/sbin/fdformat -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/ftpd -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/httpd -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/ifplugd -> ../../bin/busybox
-lrwxrwxrwx	root/root	usr/sbin/inetd -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/killall5 -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/loadfont -> ../../bin/busybox
-lrwxrwxrwx	root/root	usr/sbin/lpd -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/nanddump -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/nandwrite -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/nbd-client -> ../../bin/busybox
@@ -345,18 +321,12 @@ lrwxrwxrwx	root/root	usr/sbin/rdate -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/rdev -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/readahead -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/readprofile -> ../../bin/busybox
-lrwxrwxrwx	root/root	usr/sbin/remove-shell -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/rtcwake -> ../../bin/busybox
-lrwxrwxrwx	root/root	usr/sbin/sendmail -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/setfont -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/setlogcons -> ../../bin/busybox
-lrwxrwxrwx	root/root	usr/sbin/svlogd -> ../../bin/busybox
-lrwxrwxrwx	root/root	usr/sbin/telnetd -> ../../bin/busybox
-lrwxrwxrwx	root/root	usr/sbin/tftpd -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/ubiattach -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/ubidetach -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/ubimkvol -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/ubirmvol -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/ubirsvol -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/ubiupdatevol -> ../../bin/busybox
-lrwxrwxrwx	root/root	usr/sbin/udhcpd -> ../../bin/busybox
