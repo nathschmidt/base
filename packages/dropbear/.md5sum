@@ -1,0 +1,7 @@
+0fb706d2d677e18c43f3545ec9e3a883  dropbear-01-integration.patch
+fe61886c93d232ceb8993a542c7d407b  dropbear-02-checkhostkey.patch
+7c864ad587e6a7e467e5a823ed15c289  dropbear-03-nologin.patch
+d810e68ccc3ee0ef046fbc4f94fe2215  dropbear-04-SIGGCHLD.patch
+2b2ba859f7eaf5058b0cd93ffeca8c3a  dropbear-05-silence.patch
+c21a01111aa5015db038c6efdb85717d  dropbear-2014.66.tar.bz2
+dc5e82c5f403fbf861cff747334c4ceb  dropbear.rc

@@ -1,0 +1,22 @@
+#!/bin/sh
+
+DROPBEAR=/usr/sbin/dropbear
+KEYGEN=/usr/bin/dropbearkey
+PIDFILE=/var/run/dropbear.pid
+
+RSA=/etc/dropbear/dropbear_rsa_host_key
+DSS=/etc/dropbear/dropbear_dss_host_key
+ECDSA=/etc/dropbear/dropbear_ecdsa_host_key
+
+
+if [ ! -f $RSA ]; then
+  $KEYGEN -t rsa -s 4096 -f $RSA
+fi
+if [ ! -f $DSS ]; then
+  $KEYGEN -t dss -f $DSS
+fi
+if [ ! -f $ECDSA ]; then
+  $KEYGEN -t ecdsa -s 521 -f $ECDSA
+fi
+
+$DROPBEAR -B -P /var/run/dropbear.pid

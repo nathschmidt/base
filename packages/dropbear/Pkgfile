@@ -1,0 +1,33 @@
+name=dropbear
+version=2014.66
+release=1
+source=(
+  https://matt.ucc.asn.au/dropbear/releases/${name}-${version}.tar.bz2
+  $name.rc
+  $name-01-integration.patch
+  $name-02-checkhostkey.patch
+  $name-03-nologin.patch
+  $name-04-SIGGCHLD.patch
+  $name-05-silence.patch
+)
+
+build() {
+  cd $name-$version
+
+  for i in $SRC/*.patch; do
+    patch -p1 < $i
+  done
+
+  ./configure \
+    --prefix=/usr \
+    --mandir=/usr/man \
+    --disable-zlib
+  
+        export STATIC=1 SCPPROGRESS=0 PROGRAMS="dropbear dropbearkey scp dbclient"
+  make strip
+
+  make DESTDIR=$PKG install
+
+  mkdir -p $PKG/etc/dropbear
+  install -D -m 755 $SRC/$name.rc $PKG/etc/rc.d/$name
+}

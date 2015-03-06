@@ -1,14 +1,36 @@
 name=fs
 version=0.0.1
 release=1
-source=(init inittab rc rc.dhcp)
+source=(
+  init inittab rc rc.dhcp
+  issue motd shells group
+  passwd shadow securetty
+  fstab mime.types
+)
+
 
 build() {
-  mkdir -p $PKG/{etc,dev,root,proc,sys,tmp}
-  chmod 1777 $PKG/tmp
+  mkdir -p $PKG/{bin,etc,dev,lib,proc,root,sbin,sys,tmp,usr,var}
+  mkdir -p $PKG/usr/{bin,lib,sbin}
+  mkdir -p $PKG/var/{empty,lib,log,run,tmp}
+  chmod 1777 $PKG/tmp $PKG/var/tmp
 
   install -D -m 755 rc $PKG/etc/rc
   install -D -m 755 rc.dhcp $PKG/etc/rc.dhcp
   install -D -m 644 inittab $PKG/etc/inittab
   install -D -m 755 init $PKG/init
+
+  install -D -m 644 issue $PKG/etc
+  install -D -m 644 motd $PKG/etc
+  install -D -m 644 shells $PKG/etc
+  install -D -m 644 group $PKG/etc
+  install -D -m 644 passwd $PKG/etc
+  install -D -m 644 shadow $PKG/etc
+  install -D -m 644 securetty $PKG/etc
+  install -D -m 644 fstab $PKG/etc
+  install -D -m 644 mime.types $PKG/etc
+
+  ln -sf /proc/self/mounts $PKG/etc/mtab
+
+  chmod 640 $PKG/etc/shadow
 }

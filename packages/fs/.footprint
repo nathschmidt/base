@@ -1,10 +1,33 @@
+drwxr-xr-x	root/root	bin/
 drwxr-xr-x	root/root	dev/
 drwxr-xr-x	root/root	etc/
+-rw-r--r--	root/root	etc/fstab
+-rw-r--r--	root/root	etc/group
 -rw-r--r--	root/root	etc/inittab
+-rw-r--r--	root/root	etc/issue
+-rw-r--r--	root/root	etc/mime.types
+-rw-r--r--	root/root	etc/motd (EMPTY)
+lrwxrwxrwx	root/root	etc/mtab -> /proc/self/mounts
+-rw-r--r--	root/root	etc/passwd
 -rwxr-xr-x	root/root	etc/rc
 -rwxr-xr-x	root/root	etc/rc.dhcp
+-rw-r--r--	root/root	etc/securetty
+-rw-r-----	root/root	etc/shadow
+-rw-r--r--	root/root	etc/shells
 -rwxr-xr-x	root/root	init
+drwxr-xr-x	root/root	lib/
 drwxr-xr-x	root/root	proc/
 drwxr-xr-x	root/root	root/
+drwxr-xr-x	root/root	sbin/
 drwxr-xr-x	root/root	sys/
 drwxrwxrwt	root/root	tmp/
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/bin/
+drwxr-xr-x	root/root	usr/lib/
+drwxr-xr-x	root/root	usr/sbin/
+drwxr-xr-x	root/root	var/
+drwxr-xr-x	root/root	var/empty/
+drwxr-xr-x	root/root	var/lib/
+drwxr-xr-x	root/root	var/log/
+drwxr-xr-x	root/root	var/run/
+drwxrwxrwt	root/root	var/tmp/

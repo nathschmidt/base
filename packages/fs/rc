@@ -5,6 +5,13 @@ mount -t devtmpfs none /dev
 mount -t proc none /proc
 mount -t sysfs none /sys
 
+mkdir -p /dev/pts
+mkdir -p /dev/shm
+
+mount -a
+
 ip link set lo up
 ip link set eth0 up
 udhcpc -b -i eth0 -s /etc/rc.dhcp
+
+/etc/rc.d/dropbear &> /dev/null
