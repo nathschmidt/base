@@ -19,8 +19,6 @@ fi
 
 if [ ! -f .config ]; then
   make defconfig
-
-  sed -i "s/.*CONFIG_DEFAULT_HOSTNAME.*/CONFIG_DEFAULT_HOSTNAME=\"minimal\"/" .config
 fi
 
 make bzImage
