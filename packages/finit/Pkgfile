@@ -1,0 +1,33 @@
+name=finit
+version=HEAD
+release=1
+source=(rc.conf)
+
+build() {
+  git clone --recursive https://github.com/troglobit/finit.git
+
+  cd $name
+
+  git co $version
+
+  export CPPFLAGS="-DEMBEDDED_SYSTEM"
+
+  export FINIT_FIFO=/var/run/initctl.sock
+  export FINIT_CONF=/etc/rc.conf
+  export FINIT_RCSD=/var/empty
+
+  make clean all STATIC=1
+
+  make DESTDIR=$PKG install
+
+  install -D -m 644 $SRC/rc.conf $PKG/etc/rc.conf
+
+  mkdir -p $PKG/etc/rc.d
+
+  ln -sf finit $PKG/sbin/init
+
+  # No man page?
+  # We don't need headers
+  # We don't need other misc files
+  rm -rf $PKG/usr
+}

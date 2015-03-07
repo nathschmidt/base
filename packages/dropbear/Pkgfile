@@ -3,7 +3,6 @@ version=2014.66
 release=1
 source=(
   https://matt.ucc.asn.au/dropbear/releases/${name}-${version}.tar.bz2
-  $name.rc
   $name-01-integration.patch
   $name-02-checkhostkey.patch
   $name-03-nologin.patch
@@ -29,5 +28,4 @@ build() {
   make DESTDIR=$PKG install
 
   mkdir -p $PKG/etc/dropbear
-  install -D -m 755 $SRC/$name.rc $PKG/etc/rc.d/$name
 }

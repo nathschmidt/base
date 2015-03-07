@@ -5,6 +5,8 @@ source=(
   http://busybox.net/downloads/$name-$version.tar.bz2
   $name-$version-{dc,modinfo,modprobe-small,wget}.patch
   config-$version
+  default.script
+  rc.net
 )
 
 build() {
@@ -24,5 +26,9 @@ build() {
   make install
 
   cp -r _install/* $PKG
+
+  install -D -m 755 $SRC/default.script $PKG/usr/share/udhcpc/default.script
+  install -D -m 755 $SRC/rc.net $PKG/etc/rc.d/net
+
   rm -rf $PKG/linuxrc
 }

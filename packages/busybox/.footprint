@@ -85,6 +85,9 @@ lrwxrwxrwx	root/root	bin/usleep -> busybox
 lrwxrwxrwx	root/root	bin/vi -> busybox
 lrwxrwxrwx	root/root	bin/watch -> busybox
 lrwxrwxrwx	root/root	bin/zcat -> busybox
+drwxr-xr-x	root/root	etc/
+drwxr-xr-x	root/root	etc/rc.d/
+-rwxr-xr-x	root/root	etc/rc.d/net
 drwxr-xr-x	root/root	sbin/
 lrwxrwxrwx	root/root	sbin/acpid -> ../bin/busybox
 lrwxrwxrwx	root/root	sbin/adjtimex -> ../bin/busybox
@@ -104,10 +107,7 @@ lrwxrwxrwx	root/root	sbin/getty -> ../bin/busybox
 lrwxrwxrwx	root/root	sbin/halt -> ../bin/busybox
 lrwxrwxrwx	root/root	sbin/hdparm -> ../bin/busybox
 lrwxrwxrwx	root/root	sbin/hwclock -> ../bin/busybox
-lrwxrwxrwx	root/root	sbin/ifdown -> ../bin/busybox
 lrwxrwxrwx	root/root	sbin/ifenslave -> ../bin/busybox
-lrwxrwxrwx	root/root	sbin/ifup -> ../bin/busybox
-lrwxrwxrwx	root/root	sbin/init -> ../bin/busybox
 lrwxrwxrwx	root/root	sbin/insmod -> ../bin/busybox
 lrwxrwxrwx	root/root	sbin/ip -> ../bin/busybox
 lrwxrwxrwx	root/root	sbin/ipaddr -> ../bin/busybox
@@ -301,20 +301,15 @@ lrwxrwxrwx	root/root	usr/sbin/chroot -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/crond -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/delgroup -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/deluser -> ../../bin/busybox
-lrwxrwxrwx	root/root	usr/sbin/dnsd -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/ether-wake -> ../../bin/busybox
-lrwxrwxrwx	root/root	usr/sbin/fakeidentd -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/fbset -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/fdformat -> ../../bin/busybox
-lrwxrwxrwx	root/root	usr/sbin/ftpd -> ../../bin/busybox
-lrwxrwxrwx	root/root	usr/sbin/httpd -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/ifplugd -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/killall5 -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/loadfont -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/nanddump -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/nandwrite -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/nbd-client -> ../../bin/busybox
-lrwxrwxrwx	root/root	usr/sbin/ntpd -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/popmaildir -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/powertop -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/rdate -> ../../bin/busybox
@@ -330,3 +325,6 @@ lrwxrwxrwx	root/root	usr/sbin/ubimkvol -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/ubirmvol -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/ubirsvol -> ../../bin/busybox
 lrwxrwxrwx	root/root	usr/sbin/ubiupdatevol -> ../../bin/busybox
+drwxr-xr-x	root/root	usr/share/
+drwxr-xr-x	root/root	usr/share/udhcpc/
+-rwxr-xr-x	root/root	usr/share/udhcpc/default.script
