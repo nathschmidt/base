@@ -712,7 +712,7 @@ readonly PKGMK_VERSION="5.35.6"
 readonly PKGMK_COMMAND="$0"
 readonly PKGMK_ROOT="$PWD"
 
-PKGMK_CONFFILE="$(dirname $0)/../pkgmk.conf"
+PKGMK_CONFFILE="$(dirname $0)/pkgmk.conf"
 PKGMK_PKGFILE="Pkgfile"
 PKGMK_FOOTPRINT=".footprint"
 PKGMK_MD5SUM=".md5sum"

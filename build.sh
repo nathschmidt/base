@@ -1,12 +1,7 @@
 #!/bin/bash
 
-PKGMKCONF=$(pwd)/pkgmk.conf
-
-KVER=3.18.8
-
-
 for pkg in packages/*; do
-    (cd $pkg && fakeroot pkgmk --config-file $PKGMKCONF --download)
+  (cd $pkg && fakeroot pkgmk -d)
 done
 
 rm -rf rootfs rootfs.cpio.gz
