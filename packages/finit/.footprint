@@ -1,0 +1,25 @@
+drwxr-xr-x	root/root	etc/
+-rw-r--r--	root/root	etc/rc.conf
+drwxr-xr-x	root/root	etc/rc.d/
+drwxr-xr-x	root/root	lib/
+drwxr-xr-x	root/root	lib/finit/
+drwxr-xr-x	root/root	lib/finit/plugins/
+-rwxr-xr-x	root/root	lib/finit/plugins/alsa-utils.so
+-rwxr-xr-x	root/root	lib/finit/plugins/bootmisc.so
+-rwxr-xr-x	root/root	lib/finit/plugins/dbus.so
+-rwxr-xr-x	root/root	lib/finit/plugins/hwclock.so
+-rwxr-xr-x	root/root	lib/finit/plugins/initctl.so
+-rwxr-xr-x	root/root	lib/finit/plugins/resolvconf.so
+-rwxr-xr-x	root/root	lib/finit/plugins/time.so
+-rwxr-xr-x	root/root	lib/finit/plugins/tty.so
+-rwxr-xr-x	root/root	lib/finit/plugins/urandom.so
+-rwxr-xr-x	root/root	lib/finit/plugins/x11-common.so
+-rwxr-xr-x	root/root	lib/libite.a
+lrwxrwxrwx	root/root	lib/libite.so -> libite.so.0
+-rwxr-xr-x	root/root	lib/libite.so.0
+drwxr-xr-x	root/root	sbin/
+-rwxr-xr-x	root/root	sbin/finit
+lrwxrwxrwx	root/root	sbin/init -> finit
+-rwxr-xr-x	root/root	sbin/reboot
+drwxr-xr-x	root/root	var/
+drwxr-xr-x	root/root	var/empty/

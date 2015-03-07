@@ -1,0 +1,27 @@
+#!/bin/sh
+
+#
+# /etc/rc.d/net: start/stop network interface
+#
+
+case $1 in
+  start)
+    /sbin/ip link set lo up
+    /sbin/ip link set eth0 up
+    /sbin/udhcpc -b -i eth0
+    ;;
+  stop)
+    killall -q udhcpc
+    /sbin/ip link set eth0 down
+    /sbin/ip link set lo down
+    ;;
+  restart)
+    $0 stop
+    $0 start
+    ;;
+  *)
+    echo "Usage: $0 [start|stop|restart]"
+    ;;
+esac
+
+# End of file

@@ -1,0 +1,10 @@
+name=rc
+version=0.0.1
+release=1
+source=(rc.conf)
+
+build() {
+  install -D -m 644 $SRC/rc.conf $PKG/etc/rc.conf
+
+  mkdir -p $PKG/etc/rc.d
+}
