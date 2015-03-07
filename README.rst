@@ -25,7 +25,7 @@ The core system is comprised of the following components:
 * `Busybox`_
 * `Dropbear`_
 * `Docker`_ (*TBD*)
-* `finit`_ (*TBD*)
+* `finit`_
 
 
 Building
