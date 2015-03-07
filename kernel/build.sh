@@ -22,5 +22,5 @@ if [ ! -f .config ]; then
 fi
 
 make bzImage
-make isoimage FDARGS="quiet" FDINITRD=$ROOTFS
+make isoimage FDARGS="console=ttyS0 quiet" FDINITRD=$ROOTFS
 cp arch/x86/boot/image.iso $OUTPUT
