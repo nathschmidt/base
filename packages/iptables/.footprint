@@ -1,0 +1,23 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/bin/
+lrwxrwxrwx	root/root	usr/bin/iptables-xml -> /usr/sbin/xtables-multi
+drwxr-xr-x	root/root	usr/lib/
+-rw-r--r--	root/root	usr/lib/libip4tc.a
+-rwxr-xr-x	root/root	usr/lib/libip4tc.la
+-rw-r--r--	root/root	usr/lib/libip6tc.a
+-rwxr-xr-x	root/root	usr/lib/libip6tc.la
+-rw-r--r--	root/root	usr/lib/libipq.a
+-rwxr-xr-x	root/root	usr/lib/libipq.la
+-rw-r--r--	root/root	usr/lib/libiptc.a
+-rwxr-xr-x	root/root	usr/lib/libiptc.la
+-rw-r--r--	root/root	usr/lib/libxtables.a
+-rwxr-xr-x	root/root	usr/lib/libxtables.la
+drwxr-xr-x	root/root	usr/lib/xtables/
+drwxr-xr-x	root/root	usr/sbin/
+lrwxrwxrwx	root/root	usr/sbin/ip6tables -> xtables-multi
+lrwxrwxrwx	root/root	usr/sbin/ip6tables-restore -> xtables-multi
+lrwxrwxrwx	root/root	usr/sbin/ip6tables-save -> xtables-multi
+lrwxrwxrwx	root/root	usr/sbin/iptables -> xtables-multi
+lrwxrwxrwx	root/root	usr/sbin/iptables-restore -> xtables-multi
+lrwxrwxrwx	root/root	usr/sbin/iptables-save -> xtables-multi
+-rwxr-xr-x	root/root	usr/sbin/xtables-multi

@@ -1,0 +1,8 @@
+name=docker
+version=1.5.0
+release=1
+source=(https://get.docker.com/builds/Linux/x86_64/$name-$version)
+
+build() {
+  install -D -m 755 $name-$version $PKG/usr/bin/$name
+}
