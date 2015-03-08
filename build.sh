@@ -1,7 +1,9 @@
 #!/bin/bash
 
+export PATH="$(pwd)/tools:$PATH"
+
 for pkg in packages/*; do
-  (cd $pkg && fakeroot ./tools/pkgmk -d)
+  (cd $pkg && fakeroot pkgmk -d)
 done
 
 rm -rf rootfs rootfs.cpio.gz
