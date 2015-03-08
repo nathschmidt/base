@@ -7,11 +7,10 @@
 .. _qemu: http://www.qemu.org/
 
 
-pOS - Pico Operating System
-===========================
+Val Linux
+=========
 
-pOS (*Pico Operating System*) for want of a better name
-is a small, minimal Linux based Operating System with the
+Val LInux is a small, minimal Linux based Operating System with the
 following high level goals:
 
 * Minimal with just enough to boot a system, login and install new software.
@@ -33,8 +32,8 @@ Building
 
 ::
     
-    git clone https://github.com/therealprologic/pos.git
-    cd pos
+    git clone https://github.com/vallinux/base.git val
+    cd val
     ./build.sh
 
 
@@ -46,7 +45,7 @@ For the moment you can test the resulting ``image.iso`` built by using `qemu`_::
     qemu-system-x86_64 -cdrom image.iso -net bridge,br=br0 -net nic
 
 
-pOS does a few things at boot:
+ValLInux does a few things at boot:
 
 * Start DHCP on eth0
 * Start Dropbear
