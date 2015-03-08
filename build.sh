@@ -1,7 +1,7 @@
 #!/bin/bash
 
 for pkg in packages/*; do
-  (cd $pkg && fakeroot pkgmk -d)
+  (cd $pkg && fakeroot ./tools/pkgmk -d)
 done
 
 rm -rf rootfs rootfs.cpio.gz
