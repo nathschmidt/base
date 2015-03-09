@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ "$UID" != "0" ]; then
+  echo "You need to be root to do this."
+  exit 1
+fi
+
 export PATH="$(pwd)/tools:$PATH"
 
 for pkg in packages/*; do
