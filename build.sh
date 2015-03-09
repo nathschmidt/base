@@ -11,7 +11,7 @@ rm -rf rootfs rootfs.tar.xz rootfs.cpio.gz
 mkdir rootfs
 
 for pkg in packages/*/*#*; do
-  tar -C rootfs -xf $pkg
+  tar --numeric-owner -C rootfs -xf $pkg
 done
 
 (cd rootfs && find . | cpio -H newc -o | gzip) > rootfs.cpio.gz
