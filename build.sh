@@ -17,9 +17,9 @@ done
 (cd rootfs && find . | cpio -H newc -o | gzip) > rootfs.cpio.gz
 
 tar --numeric-owner \
-    --exclude=/init \
-    --exclude=/etc/mtab \
-    --exclude=/root/.bash_history \
+    --exclude=./init \
+    --exclude=./etc/mtab \
+    --exclude=./root/.bash_history \
     -P -cJf rootfs.tar.xz \
     -C rootfs ./
 
