@@ -11,6 +11,14 @@ for pkg in packages/*; do
   (cd $pkg && fakeroot pkgmk -d)
 done
 
+# If we didn't manage to make our packages error out
+if [ ! -f packages/*/*#* ]
+	then
+		# @todo: echo to stderr 
+		echo "Required packages not created."
+		exit 1
+fi
+
 rm -rf rootfs rootfs.tar.xz rootfs.cpio.gz
 
 mkdir rootfs
