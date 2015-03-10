@@ -18,7 +18,7 @@ build() {
   ./configure \
     --with-fifo=/var/run/initctl.sock \
     --with-config=/etc/rc.conf \
-    --with-heading="VarLinux" \
+    --with-heading="ValLinux initializing..." \
     --with-rcsd=/var/empty \
     --enable-embedded \
     --enable-static \
