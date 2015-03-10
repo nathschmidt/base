@@ -1,4 +1,5 @@
 *~
+*.log
 rootfs*
 image.iso
 kernel/linux-*
