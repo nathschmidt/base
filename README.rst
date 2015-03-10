@@ -32,7 +32,6 @@ Building
 
 On OSX
 ------
-
 ::
 	git clone https://github.com/vallinux/base.git val
 	cd val

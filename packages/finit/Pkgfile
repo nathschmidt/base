@@ -1,7 +1,10 @@
 name=finit
 version=HEAD
 release=1
-source=(rc.conf)
+source=(
+  rc.conf
+  disable_plugins.patch
+)
 
 build() {
   git clone --recursive https://github.com/troglobit/finit.git
@@ -10,24 +13,26 @@ build() {
 
   git co $version
 
-  export CPPFLAGS="-DEMBEDDED_SYSTEM"
+  patch -p1 < $SRC/disable_plugins.patch
 
-  export FINIT_FIFO=/var/run/initctl.sock
-  export FINIT_CONF=/etc/rc.conf
-  export FINIT_RCSD=/var/empty
+  ./configure \
+    --with-fifo=/var/run/initctl.sock \
+    --with-config=/etc/rc.conf \
+    --with-heading="ValLinux initializing..." \
+    --with-rcsd=/var/empty \
+    --enable-embedded \
+    --enable-static \
+    --disable-inetd \
+    --disable-plugins
 
-  make clean all STATIC=1
+  make
 
-  make DESTDIR=$PKG install
+  install -D -m 755 finit $PKG/sbin/finit
+  install -D -m 755 reboot $PKG/sbin/reboot
 
   install -D -m 644 $SRC/rc.conf $PKG/etc/rc.conf
 
   mkdir -p $PKG/etc/rc.d
 
   ln -sf finit $PKG/sbin/init
-
-  # No man page?
-  # We don't need headers
-  # We don't need other misc files
-  rm -rf $PKG/usr
 }
