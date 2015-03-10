@@ -1,7 +1,7 @@
 #!/bin/bash
 
 name=linux
-version=3.18.8
+version=3.18.9
 
 
 if [ ! -d $name-$version ]; then
