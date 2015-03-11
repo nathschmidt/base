@@ -1,21 +1,42 @@
 #!/bin/bash
 
-name=linux
-version=3.18.9
+if [ -z $KERNEL_BASEURL ]; then
+  url=https://www.kernel.org/pub/linux/kernel/
+else
+  url=$KERNEL_BASEURL
+fi
 
+if [ -z $IMAGE ]; then
+  image=image.iso
+else
+  image=$IMAGE
+fi
 
-if [ ! -d $name-$version ]; then
-  curl -q -L -O https://www.kernel.org/pub/$name/kernel/v${version%%.*}.x/$name-${version}.tar.xz
-  tar -xvf $name-${version}.tar.xz
-  cd $name-$version
+if [ -z $KERNEL_VERSION ]; then
+  version=3.18.9
+else
+  version=$KERNEL_VERSION
+fi
+
+if [ -z $ROOTFS_CPIO ]; then
+  fdinitrd=rootfs.cpio.gz
+else
+  fdinitrd=$ROOTFS_CPIO
+fi
+
+if [ ! -d linux-$version ]; then
+  curl -q -L -O $url/v${version%%.*}.x/linux-${version}.tar.xz
+  tar -xvf linux-${version}.tar.xz
+  cd linux-$version
   for i in ../patches/*.patch; do
     patch -p1 < $i
   done
   cp ../config-$version .config
 else
-  cd $name-$version
+  cd linux-$version
 fi
 
 make bzImage
-make isoimage FDARGS="console=ttyS0 quiet" FDINITRD=$ROOTFS
-cp arch/x86/boot/image.iso $OUTPUT
+echo "fdinitrd=$fdinitrd"
+make isoimage FDARGS="console=ttyS0 quiet" FDINITRD="$fdinitrd"
+cp arch/x86/boot/image.iso $image
