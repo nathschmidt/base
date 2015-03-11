@@ -18,7 +18,7 @@ following high level goals:
 * Compatible with `CRUX`_s ``Pkgfile`` format.
 * Binary based package manager.
 
-The core system is comprised of the following components:
+The core system is composed of the following components:
 
 * `Kernel`_
 * `Busybox`_
