@@ -18,7 +18,7 @@ following high level goals:
 * Compatible with `CRUX`_s ``Pkgfile`` format.
 * Binary based package manager.
 
-The core system is comprised of the following components:
+The core system is composed of the following components:
 
 * `Kernel`_
 * `Busybox`_
@@ -41,9 +41,11 @@ On CRUX Linux
 -------------
 ::
     
-    git clone https://github.com/vallinux/base.git val
-    cd val
-    ./build.sh
+    git clone https://github.com/vallinux/base.git
+    cd base
+    make
+
+.. note:: `Docker`_ is required to build ValLinux.
 
 
 Testing
@@ -51,7 +53,7 @@ Testing
 
 For the moment you can test the resulting ``image.iso`` built by using `qemu`_::
     
-    qemu-system-x86_64 -cdrom image.iso -net bridge,br=br0 -net nic
+    make test
 
 
 ValLInux does a few things at boot:

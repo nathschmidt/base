@@ -1,0 +1,8 @@
+*~
+.git
+*.iso
+rootfs*
+Dockerfile
+.dockerignore
+packages/*/*#*
+packages/*/*tar*

@@ -1,19 +1,14 @@
 name=finit
 version=HEAD
 release=1
-source=(
-  rc.conf
-  disable_plugins.patch
-)
+source=(rc.conf)
 
 build() {
   git clone --recursive https://github.com/troglobit/finit.git
 
   cd $name
 
-  git co $version
-
-  patch -p1 < $SRC/disable_plugins.patch
+  git checkout $version
 
   ./configure \
     --with-fifo=/var/run/initctl.sock \
