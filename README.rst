@@ -30,13 +30,6 @@ The core system is composed of the following components:
 Building
 --------
 
-On OSX
-------
-::
-	git clone https://github.com/vallinux/base.git val
-	cd val
-	brew install dvdrtools gcc curl fakeroot 
-
 On CRUX Linux
 -------------
 ::
