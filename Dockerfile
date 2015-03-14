@@ -5,7 +5,7 @@ RUN ports -u && \
     prt-get cache
 
 # Install cdrtools and syslinux for mkisofs
-RUN prt-get depinst cmake syslinux && \
+RUN prt-get depinst cmake syslinux httpup && \
     httpup sync http://crux.shortcircuit.net.au/#cdrtools cdrtools && \
     cd cdrtools && \
     pkgmk -d -i
